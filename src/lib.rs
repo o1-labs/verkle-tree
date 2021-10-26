@@ -21,27 +21,33 @@ impl<F: Field, P: Polynomial<F>, PC: PolynomialCommitment<F, P>> VerkleTree<F, P
 where
     PC::Commitment: ToFieldElements<F>,
 {
-    fn new(comm_key: PC::CommitterKey, depth: usize, branching_factor: usize) -> Self {
+    /// Create a verkle tree with the given depth and branching factor
+    pub fn new(comm_key: PC::CommitterKey, depth: usize, branching_factor: usize) -> Self {
         panic!("TODO");
     }
 
-    fn depth(&self) -> usize {
+    /// Returns the depth of the tree
+    pub fn depth(&self) -> usize {
         panic!("TODO");
     }
 
-    fn root(&self) -> PC::Commitment {
+    /// Returns the polynomial commitment at the root of the tree
+    pub fn root(&self) -> PC::Commitment {
         panic!("TODO");
     }
 
-    fn insert(&mut self, position: usize, x: F) {
+    /// Add an elemen to the tree at the given position
+    pub fn insert(&mut self, position: usize, x: F) {
         panic!("TODO");
     }
 
-    fn open(&self, position: Vec<usize>) -> Option<(Vec<F>, VerkleProof<F, P, PC>)> {
+    /// Batch-open the verkle tree at the given set of positions
+    pub fn open(&self, position: Vec<usize>) -> Option<(Vec<F>, VerkleProof<F, P, PC>)> {
         panic!("TODO");
     }
 
-    fn check(
+    /// Check the correctness of an opening
+    pub fn check(
         root: PC::Commitment,
         vk: PC::VerifierKey,
         (x, proof): (Vec<F>, VerkleProof<F, P, PC>),
