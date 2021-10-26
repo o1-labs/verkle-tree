@@ -1,5 +1,14 @@
 // For this exercise, you will implement a verkle tree, as described
 // here: https://vitalik.ca/general/2021/06/18/verkle.html
+//
+// There is a test which should pass, which you can run with
+//
+//     cargo test
+//
+// There are TODOs throughout the code, which you should fill in appropriately.
+//
+// The task is to define the types VerkleTree and VerkleProof so that you can define the 
+// functions below.
 
 use ark_ec::models::{short_weierstrass_jacobian::GroupAffine as SWAffine, SWModelParameters};
 use ark_ec::PairingEngine;
@@ -7,6 +16,39 @@ use ark_ff::{Field, PrimeField};
 use ark_poly::polynomial::univariate::DensePolynomial;
 use ark_poly_commit::marlin::marlin_pc::MarlinKZG10;
 use ark_poly_commit::{Polynomial, PolynomialCommitment};
+
+impl<F: Field, P: Polynomial<F>, PC: PolynomialCommitment<F, P>> VerkleTree<F, P, PC>
+where
+    PC::Commitment: ToFieldElements<F>,
+{
+    fn new(comm_key: PC::CommitterKey, depth: usize, branching_factor: usize) -> Self {
+        panic!("TODO");
+    }
+
+    fn depth(&self) -> usize {
+        panic!("TODO");
+    }
+
+    fn root(&self) -> PC::Commitment {
+        panic!("TODO");
+    }
+
+    fn insert(&mut self, position: usize, x: F) {
+        panic!("TODO");
+    }
+
+    fn open(&self, position: Vec<usize>) -> Option<(Vec<F>, VerkleProof<F, P, PC>)> {
+        panic!("TODO");
+    }
+
+    fn check(
+        root: PC::Commitment,
+        vk: PC::VerifierKey,
+        (x, proof): (Vec<F>, VerkleProof<F, P, PC>),
+    ) -> bool {
+        panic!("TODO");
+    }
+}
 
 pub trait ToFieldElements<F: Field> {
     // Just stipulates a method for converting a polynomial commitment into an vector of field
@@ -43,39 +85,6 @@ enum VerkleTree<F: Field, P: Polynomial<F>, PC: PolynomialCommitment<F, P>> {
 struct VerkleProof<F: Field, P: Polynomial<F>, PC: PolynomialCommitment<F, P>> {
     // Just here to get rid of the unused variable warning
     todo: (F, P, PC),
-}
-
-impl<F: Field, P: Polynomial<F>, PC: PolynomialCommitment<F, P>> VerkleTree<F, P, PC>
-where
-    PC::Commitment: ToFieldElements<F>,
-{
-    fn new(comm_key: PC::CommitterKey, depth: usize, branching_factor: usize) -> Self {
-        panic!("TODO");
-    }
-
-    fn depth(&self) -> usize {
-        panic!("TODO");
-    }
-
-    fn root(&self) -> PC::Commitment {
-        panic!("TODO");
-    }
-
-    fn insert(&mut self, position: usize, x: F) {
-        panic!("TODO");
-    }
-
-    fn open(&self, position: Vec<usize>) -> Option<(Vec<F>, VerkleProof<F, P, PC>)> {
-        panic!("TODO");
-    }
-
-    fn check(
-        root: PC::Commitment,
-        vk: PC::VerifierKey,
-        (x, proof): (Vec<F>, VerkleProof<F, P, PC>),
-    ) -> bool {
-        panic!("TODO");
-    }
 }
 
 use ark_bn254::{Bn254, Fr};
