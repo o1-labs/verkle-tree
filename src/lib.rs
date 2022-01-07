@@ -36,7 +36,7 @@ where
         panic!("TODO");
     }
 
-    /// Add an elemen to the tree at the given position
+    /// Add an element to the tree at the given position
     pub fn insert(&mut self, position: usize, x: F) {
         panic!("TODO");
     }
