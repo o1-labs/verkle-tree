@@ -4,9 +4,9 @@
 
 Links to solutions may be sent to crypto-interview@o1labs.org
 
-Welcome, cryptonaut! Here, at O1 Labs, we believe that even extremely talented people don't always feel confortable with long technical interview panels. With the goals of being more inclusive and bringing more diversity to our teams, we created this repository so that anyone can express their creativity and technical capabilities without going through such exhausting hurdles.
+Welcome, cryptonaut! Here, at O1 Labs, we believe that even extremely talented people don't always feel comfortable with long technical interview panels. With the goals of being more inclusive and bringing more diversity to our teams, we created this repository so that anyone can express their creativity and technical capabilities without going through such exhausting hurdles.
 
-Anyone is free to take this challenge. The file `src/lib.rs` contains the skelleton that will guide you through the tasks you need to fullfil in order to beat the challenge. The goal is to implement a Verkle tree, as described [here](https://vitalik.ca/general/2021/06/18/verkle.html).
+Anyone is free to take this challenge. The file `src/lib.rs` contains the skeleton that will guide you through the tasks you need to fulfil in order to beat the challenge. The goal is to implement a Verkle tree, as described [here](https://vitalik.ca/general/2021/06/18/verkle.html).
 
 This challenge provides you an opportunity to demonstrate the following:
 
@@ -94,7 +94,7 @@ cargo test
 
 ## Time Considerations
 
-We don't expect the algorithm to have been optimised for large amounts of data inputs, but include a description any optimizations you can think of, that could enable the tree to handle many thousands of entries. Take as long as you want, within reason. We expect a fully working Verkle tree that you would be happy to deploy to production.
+We don't expect the algorithm to have been optimized for large amounts of data inputs, but include a description any optimizations you can think of, that could enable the tree to handle many thousands of entries. Take as long as you want, within reason. We expect a fully working Verkle tree that you would be happy to deploy to production.
 
 ## Advanced Mode
 
