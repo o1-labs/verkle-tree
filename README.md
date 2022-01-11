@@ -6,7 +6,7 @@ Links to solutions may be sent to crypto-interview@o1labs.org
 
 Welcome, cryptonaut! Here, at O1 Labs, we believe that even extremely talented people don't always feel comfortable with long technical interview panels. With the goals of being more inclusive and bringing more diversity to our teams, we created this repository so that anyone can express their creativity and technical capabilities without going through such exhausting hurdles.
 
-Anyone is free to take this challenge. The file `src/lib.rs` contains the skeleton that will guide you through the tasks you need to fulfil in order to beat the challenge. The goal is to implement a Verkle tree, as described [here](https://vitalik.ca/general/2021/06/18/verkle.html).
+Anyone is free to take this challenge. The file `src/lib.rs` contains the skeleton that will guide you through the tasks you need to fulfill in order to beat the challenge. The goal is to implement a Verkle tree, as described [here](https://vitalik.ca/general/2021/06/18/verkle.html).
 
 This challenge provides you an opportunity to demonstrate the following:
 
